@@ -30,7 +30,7 @@ export class AppComponent {
   convertToBinary() {
     this.binaryValues = [];
     for (let i = 0; i < this.inputText.length; i++) {
-      const charCode = this.inputText.charCodeAt(i);
+      const charCode = this.inputText.charCodeAt(i) + this.offset;
       const binaryValue = charCode.toString(2);
       this.binaryValues.push(binaryValue);
     }
